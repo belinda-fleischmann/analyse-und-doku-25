@@ -129,7 +129,7 @@ for(i in 1:2){                                                                 #
   MSB        = SQB/DFB                                   # mean between sum of squares
   MSW        = SQW/DFW                                   # mean within sum of squares
   F[i]       = MSB/MSW                                   # F-Teststatistik
-  p_Eff[i]   = 1 - pf(Eff, p-1, n-p)                     # p-Wert
+  p_Eff[i]   = 1 - pf(F[i], p-1, n-p)                    # p-Wert
 }
 
 # Evaluation F-Statistik
@@ -142,11 +142,11 @@ cat("Stichprobenmittel BDI (CBT, PHC) : ",   round(c(mean(D$BDI[D$THP == "CBT"])
     "\nVarianzparameterschätzer   ALM 1 : ", round(S[[1]],2),
     "\nVarianzparameterschätzer   ALM 2 : ", round(S[[2]],2),
     "\nT-Statistik                ALM 1 : ", round(T[[1]],2),
-    "\nT-Statistik                ALM 2 : ", round(T[[2]],2),
-    "\nF-Statistik                ALM 1 : ", round(F[[1]],2),
-    "\nF-Statistik                ALM 2 : ", round(F[[2]],2),
-    "\np-Wert der F-Statistik     ALM 1 : ", round(p_Eff[[1]],10),
-    "\np-Wert der F-Statistik     ALM 2 : ", round(p_Eff[[2]],10)
+    "\nT-Statistik                ALM 2 : ", round(T[[2]],2) #,
+    # "\nF-Statistik                ALM 1 : ", round(F[[1]],2),
+    # "\nF-Statistik                ALM 2 : ", round(F[[2]],2),
+    # "\np-Wert der F-Statistik     ALM 1 : ", round(p_Eff[[1]],10),
+    # "\np-Wert der F-Statistik     ALM 2 : ", round(p_Eff[[2]],10)
     )
 
 
@@ -160,7 +160,9 @@ für den `DUR` Regressor durch `ALM 2` prädizierten `BDI` Anteile und visualisi
 Sie die so adjustierten `BDI` Werte ("Adjustierte Daten"). Ihre Abbildungen sollten
 in etwa aussehen wie @fig-abbildung.
 
-```{r, echo = F, eval = F}
+```{r}
+#| echo: false
+#| eval: false
 #| label: Visualisierung (low-level)
 
 graphics.off()
@@ -234,7 +236,9 @@ dev.off()
 
 \noindent 3. Zeigen Sie in einer kurzen R-Übung, wie Sie die in Aufgabe 1 bestimmten Betaparameterschätzer und T-Teststatistiken mithilfe der **R** Funktionen `stats::lm()` und `afes::aov_ez()` bestimmen können.
 
-```{r echo = F, eval = F}
+```{r}
+#| eval: false
+#| echo: false
 #| label: tidyverse style + afex
 library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
