@@ -225,7 +225,7 @@ Freitag        & 11.07.25       & Präsentationen        &  Kovarianzanalyse    
 
 \begin{itemize}\small \justifying
 \item Abgabetermin: Ein Tag vor der Präsentation
-\item Einreichung im \textcolor{linkblue}{\href{https://cloud.ovgu.de/s/A4yt8Yg3Z79SRaT}{Cloud-Ordner}}
+\item Einreichung im \textcolor{linkblue}{\href{https://cloud.ovgu.de/s/LMd5EEpTYZ6eM4T}{Cloud-Ordner}}
 \item Erforderliche Dateien pro Gruppe:
    \begin{itemize}\small \justifying
       \item Bericht als .qmd und .pdf
