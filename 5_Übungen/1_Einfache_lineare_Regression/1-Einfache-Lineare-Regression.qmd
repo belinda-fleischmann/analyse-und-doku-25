@@ -183,7 +183,7 @@ dev.off()
 
 ![Patient:innen-spezifische Ausgleichsgeraden (Int: Intake, Mid: Midtherapy, Ter: Termination)](1-Einfache-Lineare-Regression-Abbildung.pdf){#fig-abbildung fig-align="center" width=70%} 
 
-\noindent 3. Zeigen Sie in einer R-Übung, dass Sie bei der Bestimmung der Ausgleichsgeradenparameter "manuell", also unter Verwendung der in der \href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2024/Allgemeines+Lineares+Modell.html}{Vorlesung ALM (1)} im Theorem zu Ausgleichsgeradenparameter gelernten Formlen und mithilfe der Funktion `stats::lm()` auf die gleichen Ergebnisse kommen.
+\noindent 3. Zeigen Sie, dass Sie bei der Bestimmung der Ausgleichsgeradenparameter "manuell", also unter Verwendung der in der \href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2024/Allgemeines+Lineares+Modell.html}{Vorlesung ALM (1)} im Theorem zu Ausgleichsgeradenparameter gelernten Formlen und mithilfe der Funktion `stats::lm()` auf die gleichen Ergebnisse kommen.
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style

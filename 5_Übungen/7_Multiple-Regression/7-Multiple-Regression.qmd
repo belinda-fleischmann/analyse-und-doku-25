@@ -141,7 +141,7 @@ dev.off()
 ![Visualisierung des Datensatzes und Regressionsebene](7-Multiple-Regression-Abbildung){#fig-mrg-fit fig-align="center" width=70%}  
 
 
-\noindent 3. Demonstrieren Sie in einer kurzen R-Übung, wie Sie analog zu der in Aufgabe 2 erstellten Grafik, eine interaktive Visualisierung erzeugen können. Nutzen sie dafür die Funktion `plot_ly` des **R** Pakets `plotly`.
+\noindent 3. Demonstrieren Sie, wie Sie analog zu der in Aufgabe 2 erstellten Grafik, eine interaktive Visualisierung erzeugen können. Nutzen sie dafür die Funktion `plot_ly` des **R** Pakets `plotly`.
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style

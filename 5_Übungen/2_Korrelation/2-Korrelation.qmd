@@ -143,7 +143,7 @@ dev.off()
 
 ![Korrelation von General Advisement und BDI Change Index](2-Korrelation-Abbildung.pdf){#fig-abbildung fig-align="center" width=70%} 
 
-\noindent 3. Zeigen Sie in einer R-Übung, wie Sie die Abbildung aus Aufgabe 2 mit dem **R** Paket `ggplot2` generieren können. Hierfür können sie Beispiel können Sie die Funktionen `ggplot2::geom_point()` und `ggplot2::geom_smooth()` verwenden. Konsultieren Sie dazu auch die Einführung zu Visualisierungen in \href{https://r4ds.hadley.nz/data-visualize}{R for Data Science}.
+\noindent 3. Zeigen Sie, wie Sie die Abbildung aus Aufgabe 2 mit dem **R** Paket `ggplot2` generieren können. Hierfür können sie Beispiel können Sie die Funktionen `ggplot2::geom_point()` und `ggplot2::geom_smooth()` verwenden. Konsultieren Sie dazu auch die Einführung zu Visualisierungen in \href{https://r4ds.hadley.nz/data-visualize}{R for Data Science}.
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style

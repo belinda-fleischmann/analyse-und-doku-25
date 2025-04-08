@@ -243,7 +243,7 @@ dev.off()
 ![Gruppenspezifische Stichprobenmittel und Stichprobenstandardabweichungen (Chr: Chronic, Oth: Other, CBA: CBASP)](6-Zweifaktorielle-Varianzanalyse-Abbildung.pdf){#fig-abbildung fig-align="center" width=80%}  
 
 
-\noindent 3. Zeigen Sie in einer kurzen R-Übung wie Sie die nach *Treatment* gruppierten Deskriptien Statistiken mithilfe einer \href{https://style.tidyverse.org/pipes.html#pipes}{tydiverse Pipe} und der Funktion `aov_car` des **R** Pakets `afex` durchführen können. Konsultieren Sie zum Verständnis der Pipe Funktion auch die Einführung zu Data transformation in\href{https://r4ds.hadley.nz/data-transform#sec-the-pipe}{R for Data Science}.
+\noindent 3. Zeigen Sie, wie Sie die nach *Treatment* gruppierten Deskriptien Statistiken mithilfe einer \href{https://style.tidyverse.org/pipes.html#pipes}{tydiverse Pipe} und der Funktion `aov_car` des **R** Pakets `afex` durchführen können. Konsultieren Sie zum Verständnis der Pipe Funktion auch die Einführung zu Data transformation in\href{https://r4ds.hadley.nz/data-transform#sec-the-pipe}{R for Data Science}.
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style

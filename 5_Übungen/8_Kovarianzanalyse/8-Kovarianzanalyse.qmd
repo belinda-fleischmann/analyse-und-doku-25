@@ -234,7 +234,7 @@ dev.off()
 
 ![Rohdaten und Adjustierte Daten](8-Kovarianzanalyse-Abbildung.pdf){#fig-abbildung fig-align="center"}  
 
-\noindent 3. Zeigen Sie in einer kurzen R-Übung, wie Sie die in Aufgabe 1 bestimmten Betaparameterschätzer und T-Teststatistiken mithilfe der **R** Funktionen `stats::lm()` und `afes::aov_ez()` bestimmen können.
+\noindent 3. Zeigen Sie, wie Sie die in Aufgabe 1 bestimmten Betaparameterschätzer und T-Teststatistiken mithilfe der **R** Funktionen `stats::lm()` und `afes::aov_ez()` bestimmen können.
 
 ```{r}
 #| eval: false
