@@ -34,21 +34,21 @@ Belinda Fleischmann und Dirk Ostwald
 \renewcommand{\arraystretch}{1.1}
 
 \begin{tabular}{lllll}
-   & Gruppe 1/2       & Gruppe 3       & Format                    & Thema                                \\ \hline
-\textbf{1}  & \textbf{Do, 10.04}    & \textbf{Fr, 11.04}  & \textbf{Seminar}                    & \textbf{(1) Quarto, Zotero, Tidyverse}                   \\
-2  & Do, 17.04        & Fr, 25.04      & Seminar                    & (2) Ethik und Ethische Formalitäten \\
-3  & Do, 24.04        & Fr, 02.05      & Seminar                    & (3) Wissenschaftliche Berichte      \\
-4  & Mi, 30.04        & Fr, 09.05      & Seminar                    & (4) Offenheit und Transparenz       \\
-5  & Do, 08.05        & Fr, 16.05      & Praxisseminar              & Offene Übung                        \\ \hline
-6  & Do, 15.05        & Fr, 23.05      & Präsentationen             & Einfache Lineare Regression         \\
-7  & Mi, 21.05        & Fr, 30.05      & Präsentationen             & Korrelation                         \\
-8  & Do, 05.06        & Fr, 06.06      & Präsentationen             & Einstichproben-T-Test               \\
-9  & Do, 12.06        & Fr, 13.06      & Präsentationen             & Zweistichproben-T-Test              \\
-10 & Do, 19.06        & Fr, 20.06      & Präsentationen             & Einfaktorielle Varianzanalyse       \\
-11 & Do, 26.06        & Fr, 27.06      & Präsentationen             & Zweifaktorielle Varianzanalyse      \\
-12 & Do, 03.07        & Fr, 04.07      & Präsentationen             & Multipe Regression                  \\
-13 & Do, 10.07        & Fr, 11.07      & Präsentationen             & Kovarianzanalyse                    \\ \hline
-  & Juli              &                & Klausurtermin              &                                      \\
+  & Gruppe 1/2       & Gruppe 3       & Format                    & Thema                                \\ \hline
+\textbf{1}  & \textbf{Do, 10.04.}    & \textbf{Fr, 11.04.}  & \textbf{Seminar}                    & \textbf{(1) Quarto, Zotero, Tidyverse}                   \\
+2  & Do, 17.04.        & Fr, 25.04.      & Seminar                    & (2) Ethik und Ethische Formalitäten \\
+3  & Do, 24.04.        & Fr, 02.05.      & Seminar                    & (3) Wissenschaftliche Berichte      \\
+4  & Mi, 30.04.        & Fr, 09.05.      & Seminar                    & (4) Offenheit und Transparenz       \\
+5  & Do, 08.05.        & Fr, 16.05.      & Praxisseminar              & Offene Übung                        \\ \hline
+6  & Do, 15.05.        & Fr, 23.05.      & Präsentationen             & Einfache Lineare Regression         \\
+7  & Mi, 21.05.        & Fr, 30.05.      & Präsentationen             & Korrelation                         \\
+8  & Do, 05.06.        & Fr, 06.06.      & Präsentationen             & Einstichproben-T-Test               \\
+9  & Do, 12.06.        & Fr, 13.06.      & Präsentationen             & Zweistichproben-T-Test              \\
+10 & Do, 19.06.        & Fr, 20.06.      & Präsentationen             & Einfaktorielle Varianzanalyse       \\
+11 & Do, 26.06.        & Fr, 27.06.      & Präsentationen             & Zweifaktorielle Varianzanalyse      \\
+12 & Do, 03.07.        & Fr, 04.07.      & Präsentationen             & Multipe Regression                  \\
+13 & Do, 10.07.        & Fr, 11.07.      & Präsentationen             & Kovarianzanalyse                    \\ \hline
+   & Juli              &                 & Klausurtermin              &                                     \\
 \end{tabular}
 
 \vfill
