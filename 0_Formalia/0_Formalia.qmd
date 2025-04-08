@@ -120,7 +120,7 @@ Freitags, 9-11 Uhr (Raum G22A-111)
 
 \begin{tabular}{llll}
 Wochentag      & Datum          & Format                & Thema                                 \\\hline
-Donnerstag     & 10.04.25       & Seminar               &  (1) Quarto und Zotero\\
+Donnerstag     & 10.04.25       & Seminar               &  (1) Quarto, Zotero, Tidyverse        \\
 Donnerstag     & 17.04.25       & Seminar               &  (2) Ethik und Ethische Formalitäten       \\
 Donnerstag     & 24.04.25       & Seminar               &  (3) Wissenschaftliche Berichte        \\
 \textcolor{darkblue}{Mittwoch}  & 30.04.25              & Seminar  &  (4) Offenheit und Transparenz         \\
@@ -147,7 +147,7 @@ Donnerstag     & 10.07.25       & Präsentationen        &  Kovarianzanalyse    
 
 \begin{tabular}{llll}
 Wochentag      & Datum          & Format               & Thema                                  \\\hline
-Freitag        & 11.04.25       & Seminar               &  (1) Quarto und Zotero                \\
+Freitag        & 11.04.25       & Seminar               &  (1) Quarto, Zotero, Tidyverse                \\
 \textcolor{gray}{Freitag}    & \textcolor{gray}{18.04.25}       & \textcolor{gray}{Karfreitag}  \\
 Freitag        & 25.04.25       & Seminar               &  (2) Ethik und Ethische Formalitäten  \\
 Freitag        & 02.05.25       & Seminar               &  (3) Wissenschaftliche Berichte       \\
