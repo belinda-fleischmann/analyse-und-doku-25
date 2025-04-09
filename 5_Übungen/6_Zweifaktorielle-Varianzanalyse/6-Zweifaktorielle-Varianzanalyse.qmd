@@ -1,6 +1,6 @@
 ---
 title: "Zweifaktorielle Varianzanalyse"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 6-Referenzen.bib
 lang: de
 format: 
@@ -34,7 +34,7 @@ set.seed(1)                                                                    #
 library(MASS)                                                                  # Multivariate Normalverteilung
 I        <- 2                                                                  # Anzahl Level Faktor A (Depressionsforms)
 J        <- 2                                                                  # Anzahl Level Faktor B (Therapieart)
-n_ij     <- 40                                                                 # balanciertes ANOVA Design
+n_ij     <- 40                                                                 # Anzahl Daten pro Gruppe (balanciertes ANOVA Design)
 n        <- I*J*n_ij                                                           # Anzahl Datenpunkte
 p        <- 1 + (I-1)+(J-1)+(I*J-3)                                            # Anzahl Parameter
 D        <- matrix(c(1,0,0,0,                                                  # Referenzgruppenregressor
@@ -63,9 +63,10 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r echo = F, eval = T, warning = F}
 #| label: tbl-bdi
 #| tbl-cap : "Pre-Post BDI Differenzwerte Werte der Studiengruppen (Chr: Chronic, Oth: Other, CBA: CBASP)"
-library(knitr)                                                                 # knitr für Tabellen
+library(knitr)                                                                 # Für kable()
 fname       <- "6-Zweifaktorielle-Varianzanalyse.csv"                          # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
+n_ij        <- as.vector(table(D$Form, D$Treatment))[1]                        # Anzahl Daten pro Gruppe (balanciertes ANOVA Design)
 kable(D[c(1:2,                                                                 # erste zwei Patient:innen Chronic/CBASP Bedingung
          (1:2)+sum(n_ij*1),                                                    # erste zwei Patient:innen Chronic/CBT   Bedingung
          (1:2)+sum(n_ij*2),                                                    # erste zwei Patient:innen Other/CASP    Bedingung
@@ -85,7 +86,7 @@ Sie sollten folgende Ergebnisse erhalten.
 \tiny
 ```{r, echo = F}
 #| label: Deskriptivstatistik
-
+library(knitr)                                                                 # Für kable()
 # Laden des Datensatzes
 fname     <- "6-Zweifaktorielle-Varianzanalyse.csv"                            # Dateiname
 D         <- read.table(file.path(fname), sep = ",", header = TRUE)            # Laden des Datensatzes
@@ -127,7 +128,7 @@ kable(S, digits = 1)                                                           #
 # Inferenzstatistik
 cat("Zweifaktorielle Varianzanalyse mit Interaktion")                          # user information
 glm         <- lm(dBDI ~ Form + Treatment + Form:Treatment, data = D)          # Modellformulierung und Modellschätzung
-kable(anova(glm), digits = 2)                                                  # ANOVA Tabelllenausgabe   
+knitr::kable(anova(glm), digits = 2)                                           # ANOVA Tabelllenausgabe
 ```
 
 \normalsize
@@ -182,7 +183,7 @@ x           <- barplot(
   xlim        = c(0,5),
   xlab        = "Group"
 )
-  arrows(
+arrows(
   x0          = x,
   y0          = groupmeans - groupstds,
   x1          = x,
@@ -248,15 +249,14 @@ dev.off()
 ```{r echo = F, eval = F}
 #| label: tidyverse style
 
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
 library(afex)                                                                  # Für aov_car()
 library(ggpubr)                                                                # Für ggarrange()
 
 # Daten vorbereiten
-fname <- "5_Übungen/6_Zweifaktorielle-Varianzanalyse/6-Zweifaktorielle-Varianzanalyse.csv" # Dateiname
-fname <- "6-Zweifaktorielle-Varianzanalyse.csv"                                            # Dateiname
+# fname <- "5_Übungen/6_Zweifaktorielle-Varianzanalyse/6-Zweifaktorielle-Varianzanalyse.csv" # Dateiname
+fname <- "6-Zweifaktorielle-Varianzanalyse.csv"                                # Dateiname
 D           <- read.table(fname, sep = ",", header = TRUE)                     # Laden des Datensatzes
 n_subs      <- nrow(D)
 D_processed <- D %>%
@@ -284,9 +284,6 @@ print(anova_results)                                                           #
 View(anova_results)                                                            # Mehr details ansehen
 
 # Visualisierung
-# # Start plot viewer
-# hgd()
-# hgd_browse()
 bar_plot <- ggplot(data = summary_stats, aes(x = paste(Form, Treatment), y = Mean)) +
       geom_col(color = "gray") +
       geom_errorbar(aes(ymin = Mean - Std, ymax = Mean + Std), 

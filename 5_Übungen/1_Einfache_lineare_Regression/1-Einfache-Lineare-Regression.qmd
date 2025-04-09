@@ -1,6 +1,6 @@
 ---
 title: "Einfache lineare Regression"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 1-Referenzen.bib
 lang: de
 format: 
@@ -57,7 +57,7 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r, eval = T, echo = F, warning = F}
 #| label: tbl-bdi
 #| tbl-cap : "BDI Scores"
-library(knitr)                                                                 # knitr für Tabellen
+library(knitr)                                                                 # Für kable()
 fname       <- "1-Einfache-Lineare-Regression.csv"                             # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
 kable(head(D, n = 10L), digits = 2, align = "c")                               # Markdowntabellenoutput für head(D)
@@ -75,6 +75,7 @@ der Steigungsparameter. Sie sollten folgende Ergebnisse erhalten:
 ```{r, eval = T, echo = F}
 #| label: Ausgleichsgeradenparameter (Theorem)
 # Datenanalyse
+# fname     <- "5_Übungen/1_Einfache_lineare_Regression/1-Einfache-Lineare-Regression.csv"  # Dateiname
 fname       <- "1-Einfache-Lineare-Regression.csv"                             # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
 np          <- nrow(D)                                                         # Anzahl Patient:innen
@@ -155,13 +156,13 @@ for(i in 1:4){
     ylim    = c(min(D)-2, max(D) + 2),
     cex     = 1.2,
     xaxt    = "n",
-    main    =  TeX(sprintf("Patient:in %.0f, Steigunsparameter = $ %.1f", i, beta_hat_p[2, i])))
+    main    =  TeX(sprintf("Patient:in %.0f, Steigunsparameter = $ %.1f", i, beta_hat_algr[2, i])))
     axis(side = 1, at = c(1, 2, 3), labels = c("Int", "Mid", "Ter")
   )
 
   # Ausgleichsgerade
   abline(
-    coef        = c(beta_hat_p[1,i], beta_hat_p[2,i]),
+    coef        = c(beta_hat_algr[1,i], beta_hat_algr[2,i]),
     lty         = 1,
     col         = "gray"
   )
@@ -183,16 +184,16 @@ dev.off()
 
 ![Patient:innen-spezifische Ausgleichsgeraden (Int: Intake, Mid: Midtherapy, Ter: Termination)](1-Einfache-Lineare-Regression-Abbildung.pdf){#fig-abbildung fig-align="center" width=70%} 
 
-\noindent 3. Zeigen Sie, dass Sie bei der Bestimmung der Ausgleichsgeradenparameter "manuell", also unter Verwendung der in der \href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2024/Allgemeines+Lineares+Modell.html}{Vorlesung ALM (1)} im Theorem zu Ausgleichsgeradenparameter gelernten Formlen und mithilfe der Funktion `stats::lm()` auf die gleichen Ergebnisse kommen.
+\noindent 3. Zeigen Sie, dass Sie bei der Bestimmung der Ausgleichsgeradenparameter "manuell", also unter Verwendung der in der \href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2025/Allgemeines+Lineares+Modell.html}{Vorlesung ALM (1)} im Theorem zu Ausgleichsgeradenparameter gelernten Formlen und mithilfe der Funktion `stats::lm()` auf die gleichen Ergebnisse kommen.
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
+library(tidyr)                                                                 # Für gather()
 library(ggplot2)                                                               # Für ggplot()
 
 # Daten vorbereiten
-# file_path <- "6_Übungen/1_Einfache_lineare_Regression/1-Einfache-Lineare-Regression.csv"
+# file_path <- "5_Übungen/1_Einfache_lineare_Regression/1-Einfache-Lineare-Regression.csv"
 file_path <- "1-Einfache-Lineare-Regression.csv"
 D <- read.table(file_path, sep = ",", header = TRUE)
 n_pat <- nrow(D)                                                               # Anzahl Patientinnen
@@ -207,9 +208,6 @@ D_for_plotting <- D_long_format %>%                                            #
   mutate(Therapieverlauf = therapieverlauf_mapping[Therapieverlauf])
 
 # Visualisierung
-# # Start plot viewer
-# hgd()
-# hgd_browse()
 custom_labeller <- function(variable, value) {                                 # PatientIn-spezifische plot label
   value <- paste0("PatientIn ", value)
   return(value)

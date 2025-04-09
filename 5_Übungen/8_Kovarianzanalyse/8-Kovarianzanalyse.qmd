@@ -1,6 +1,6 @@
 ---
 title: "Kovarianzanalyse"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 8-Referenzen.bib
 lang: de
 format: 
@@ -54,9 +54,10 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r echo = F}
 #| label: tbl-bdi
 #| tbl-cap : "Auszug des Beispieldatensatzes"
-fname    <- file.path("8-Kovarianzanalyse.csv")           # Dateiname
+library(knitr)                                                                 # Für kable()
+fname    <- file.path("8-Kovarianzanalyse.csv")                                # Dateiname
 D        <- read.table(file.path(fname), sep = ",", header = TRUE)             # Laden des Datensatzes
-knitr::kable(D[c(1:8,21:28),], digits = 2, align = "c")                        # erste acht Patient:innen jeder Therapiebedingung
+kable(D[c(1:8,21:28),], digits = 2, align = "c")                               # erste acht Patient:innen jeder Therapiebedingung
 ``` 
 \normalsize
 
@@ -77,7 +78,7 @@ und Varianzparameterschätzer sowie die T-Statistk für den Therapieeffektregres
 #| label: Kovarianzanalyse (Theorem)
 
 # Laden des Datensatzes
-fname       <- "5_Übungen/8_Kovarianzanalyse/8-Kovarianzanalyse.csv"            # Dateiname
+# fname       <- "5_Übungen/8_Kovarianzanalyse/8-Kovarianzanalyse.csv"         # Dateiname
 fname       <- "8-Kovarianzanalyse.csv"                                        # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
 n_i         <- c(20,20)                                                        # Anzahl Datenpunkte pro Gruppe
@@ -99,9 +100,10 @@ S           <- rep(NaN,2)                                                      #
 T           <- rep(NaN,2)                                                      # T-Statistikvektor
 F           <- rep(NaN,2)                                                      # F-Statistikvektor
 p_Eff       <- rep(NaN,2)                                                      # p-Wert der F-Statistik Vektor
+
 # Datengruppen
-y_1        = D$BDI[D$THP == "CBT"]                # BDI-Differenzwerte in der F2F-Gruppe
-y_2        = D$BDI[D$THP == "PHC"]                # BDI-Differenzwerte in der ONL-Gruppe
+y_1        = D$BDI[D$THP == "CBT"]                                             # BDI-Differenzwerte in der F2F-Gruppe
+y_2        = D$BDI[D$THP == "PHC"]                                             # BDI-Differenzwerte in der ONL-Gruppe
 for(i in 1:2){                                                                 # ALM Iterationen
   X           <- XS[[i]]                                                       # Designmatrix
   X_0         <- XS[[i]][, 1:i]                                                # Designmatrix reduziertes Modell
@@ -119,17 +121,17 @@ for(i in 1:2){                                                                 #
   T[i]        <- t                                                             # T-Statistik
 
   # Evaluation der F-Teststatistik
-  eps_hat    = y - X %*% beta_hat                        # Residuenvektor vollständiges Modell
-  eps_hat_0  = y - X_0 %*% beta_hat_0                    # Residuenvektor reduziertes Modell
-  SQT        = t(eps_hat_0) %*% eps_hat_0                # total sum of squares
-  SQW        = t(eps_hat)   %*% eps_hat                  # within sum of squares
-  SQB        = SQT - SQW                                 # between sum of squares
-  DFB        = p - 1                                     # between degrees of freedom
-  DFW        = n - p                                     # within degrees of freedom
-  MSB        = SQB/DFB                                   # mean between sum of squares
-  MSW        = SQW/DFW                                   # mean within sum of squares
-  F[i]       = MSB/MSW                                   # F-Teststatistik
-  p_Eff[i]   = 1 - pf(F[i], p-1, n-p)                    # p-Wert
+  eps_hat    = y - X %*% beta_hat                                              # Residuenvektor vollständiges Modell
+  eps_hat_0  = y - X_0 %*% beta_hat_0                                          # Residuenvektor reduziertes Modell
+  SQT        = t(eps_hat_0) %*% eps_hat_0                                      # total sum of squares
+  SQW        = t(eps_hat)   %*% eps_hat                                        # within sum of squares
+  SQB        = SQT - SQW                                                       # between sum of squares
+  DFB        = p - 1                                                           # between degrees of freedom
+  DFW        = n - p                                                           # within degrees of freedom
+  MSB        = SQB/DFB                                                         # mean between sum of squares
+  MSW        = SQW/DFW                                                         # mean within sum of squares
+  F[i]       = MSB/MSW                                                         # F-Teststatistik
+  p_Eff[i]   = 1 - pf(F[i], p-1, n-p)                                          # p-Wert
 }
 
 # Evaluation F-Statistik
@@ -234,21 +236,19 @@ dev.off()
 
 ![Rohdaten und Adjustierte Daten](8-Kovarianzanalyse-Abbildung.pdf){#fig-abbildung fig-align="center"}  
 
-\noindent 3. Zeigen Sie, wie Sie die in Aufgabe 1 bestimmten Betaparameterschätzer und T-Teststatistiken mithilfe der **R** Funktionen `stats::lm()` und `afes::aov_ez()` bestimmen können.
+\noindent 3. Zeigen Sie, wie Sie die in Aufgabe 1 bestimmten Betaparameterschätzer und T-Teststatistiken mithilfe der **R** Funktionen `stats::lm()` bestimmen können.
 
 ```{r}
 #| eval: false
 #| echo: false
 #| label: tidyverse style + afex
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
-library(afex)                                                                  # Für aov_ez()
 library(ggpubr)                                                                # Für ggarrange()
-
+library(afex)                                                                  # Für aov_ez()
 
 # Daten vorbereiten
-fname      <- "5_Übungen/8_Kovarianzanalyse/8-Kovarianzanalyse.csv"            # Dateiname
+# fname      <- "5_Übungen/8_Kovarianzanalyse/8-Kovarianzanalyse.csv"          # Dateiname
 fname      <- "8-Kovarianzanalyse.csv"                                         # Dateiname
 D          <- read.table(fname, sep = ",", header = TRUE)                      # Laden des Datensatzes
 n_subs     <- nrow(D)
@@ -264,29 +264,25 @@ means <- D_processed %>%
     mean_DUR = mean(DUR)
   )
 
-# Beta-parameterschätzer
-beta_hats = list()
-beta_hats <- D_processed %>%
-  summarize(
-    alm1_beta = list(lm(BDI ~ THP)$coefficients),
-    alm2_beta = list(lm(BDI ~ THP + DUR)$coefficients)
-  )
+# Lineare Modelle (ALM) mit und ohne Kovariate berechnen und speichern:
 alm1_fit <- lm(BDI ~ THP, data = D_processed)                                  # ALM 1, nur eine kategoriale UV
 alm2_fit <- lm(formula = BDI ~ THP + DUR, data = D_processed)                  # ALM 2, eine kategoriale UV plus eine kontinuierliche Kovariate
 
+# Betaparameterschätzwerte aus den lm-output-Objekten extrahieren
+beta_hats = list()
+beta_hats <- D_processed %>%
+  summarize(
+    alm1_beta = list(alm1_fit$coefficients),
+    alm2_beta = list(alm2_fit$coefficients)
+  )
 
-# Kovarianzanalyse mit aov_ez()
-alm1 <- aov_ez(                                                                # ALM 1, nur eine kategoriale UV
-  id = "ID", dv = "BDI", data = D_processed, between = "THP")
-alm2 <- aov_ez(                                                                # ALM 2, eine kategoriale UV
-  id = "ID", dv = "BDI", data = D_processed, between = "THP",
-    covariate = "DUR",                                                         # plus eine covariate
-    factorize = FALSE                                                          # verhindern, dass var. faktorisiert werden
-)
-# T-Statistiken für THP
-t_stat_alm1 <- sqrt(alm1$anova_table$F)
-t_stat_alm2 <- sqrt(alm2$anova_table$F[1])
+# Vollständige Berichte inkl. Betaschätzwerte und T-Test Statistiken
+summary_alm1 <- summary(alm1_fit)
+summary_alm2 <- summary(alm2_fit)
 
+# T-Statistiken für THP aus dem Summary-Objekten extrahieren
+t_stat_alm1 <- summary_alm1[["coefficients"]][, "t value"]
+t_stat_alm2 <- summary_alm2[["coefficients"]][, "t value"]
 
 # Ausgabe der Ergebnisse
 cat("Stichprobenmittel BDI (CBT, PHC) : ",   round(c(
@@ -303,11 +299,21 @@ cat("Stichprobenmittel BDI (CBT, PHC) : ",   round(c(
     "\nT-Statistik                ALM 2 : ", round(t_stat_alm2, 2)
   )
 
+# Zusatzaugabe (nicht Teil der Aufgabenstellung): Kovarianzanalyse mit afex::aov_ez()
+alm1 <- aov_ez(                                                                # ALM 1, nur eine kategoriale UV
+  id = "ID", dv = "BDI", data = D_processed, between = "THP")
+alm2 <- aov_ez(                                                                # ALM 2, eine kategoriale UV
+  id = "ID", dv = "BDI", data = D_processed, between = "THP",
+    covariate = "DUR",                                                         # Hinzunahme einer Kovariate
+    factorize = FALSE                                                          # verhindern, dass var. faktorisiert werden
+)
+
+cat("\nVarianzparameterschätzer   ALM 1 : ", round(alm1$anova_table$MSE,2),
+    "\nVarianzparameterschätzer   ALM 2 : ", round(alm2$anova_table$MSE[1],2)
+    )
+
 
 # ------ Visualisierung -------------------------------------------------------
-# # Start plot viewer
-# hgd()
-# hgd_browse()
 plot_list <- list()                                                            # leere Liste, um plots zu speichern
 # Designmatrix erstellen
 n_i <- c(20, 20)                                                               # Anzahl Datenpunkte pro Gruppe
@@ -320,34 +326,40 @@ X <- matrix(c(rep(1, n_i[1]), rep(1, n_i[2]),                                  #
 # Iteration über unkorrigierte und korrigierte Daten
 for (i in c("Rohdaten", "Adjustierte Daten")){
 
+  # Auswahl des Datensatzes je nach Durchlauf
   if (i == "Rohdaten"){
-    data_set <- D_processed
+    data_set <- D_processed                                                    # Zuweisung der Rohdaten (unkorrigiert)
   } else {
-    data_set <- D_processed %>%
-      mutate(BDI = BDI - X[, 3] * beta_hats$alm2_beta[[1]]["DUR"]
+    data_set <- D_processed %>%                                                # Zuweisung der adjustierte Daten
+      mutate(BDI = BDI - X[, 3] * beta_hats$alm2_beta[[1]]["DUR"]              # Adjustierung des BDI-Werts um den Effekt der Kovariate DUR
       )
   }
-  print(i)
-  print(data_set)
 
   # Deskriptive Statistiken
   summary_stats <- data_set %>%
-    group_by(THP) %>%                                                          # Nach Treatment gruppieren
-    summarize(                                                                 # Kreiert dataframe mit eine Zeile für jede Gruppe
-      Mean = mean(BDI),
-      Var = var(BDI),
-      Std = sd(BDI)
+    group_by(THP) %>%                                                          # Gruppierung nach Therapievariante (THP)
+    summarize(                                                                 # Neue Tabelle mit einer Zeile pro Gruppe
+      Mean = mean(BDI),                                                        # Mittelwert des BDI
+      Var = var(BDI),                                                          # Varianz des BDI
+      Std = sd(BDI)                                                            # Standardabweichung des BDI
     )
-
-  #plot[i] <- # Erstellen des Plots mit ggp und facet_wrap
-  plot_list[[i]] <- ggplot(summary_stats, aes(x = THP, y = Mean)) +
-    geom_bar(stat = "identity", fill="lightblue") +
-    geom_errorbar(N
+  
+  # Plot erstellen
+  plot_list[[i]] <- ggplot(summary_stats, aes(x = THP, y = Mean)) +            # Diagramm mit THP auf der x- und Mittelwerten auf der y-Achse 
+    geom_bar(                                                                  # Balkendiagramms für Mittelwerte je Gruppe (THP)
+      stat = "identity",                                                       # "identity": Balkenhöhe entspricht dem y-Wert (hier: Mittelwert)
+      fill="lightblue") +
+    geom_errorbar(                                                             # Fehlerbalken für ± eine Standardabweichung
       aes(ymin = Mean - Std, ymax = Mean + Std),
       width = 0.2, position = position_dodge(width = 0.9)) +
-    geom_jitter(data = data_set, aes(y = BDI), width = 0.2, height = 0, shape = 21, fill = "black", color = "white") +
-    ylim(-8, 22) +
-    labs(x = "Therapievariante", y = "BDI", title = i)
+    geom_jitter(                                                               # Streudiagramm der Einzeldatenpunkte mit horizontalem "Jitter"
+      width = 0.2,                                                             # Breite des zufälligen Jitters (um Überlagerung zu vermeiden)
+      data = data_set,                                                         # Verwendung des vollständigen Datensatz mit Einzeldatenpunkten
+      aes(y = BDI),                                                            # y-Wert entspricht BDI
+      shape = 21,                                                              # Form der Punkte: gefüllte Kreise
+      fill = "black", color = "white") +                                       # Schwarze Punkte mit weißem Rand
+    ylim(-8, 22) +                                                             # y-Achsenabschnitt
+    labs(x = "Therapievariante", y = "BDI", title = i)                         # Achsenbeschriftung und Titel
 }
 
 gesamt_plot <- ggarrange(                                                      # Plots in eine Grafik zusammenfügen

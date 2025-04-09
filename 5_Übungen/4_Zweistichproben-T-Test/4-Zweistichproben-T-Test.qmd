@@ -1,6 +1,6 @@
 ---
 title: "Zweistichproben-T-Test"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 4-Referenzen.bib
 lang: de
 format: 
@@ -54,7 +54,7 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r echo = F, eval = T, warning = F}
 #| label: tbl-bdi
 #| tbl-cap : "Exemplarische Pre- und Post-Intervention BDI Werte der Studiengruppen."
-library(knitr)                                                                 # knitr für Tabellen
+library(knitr)                                                                 # Für kable()
 fname       <- "4-Zweistichproben-T-Test.csv"                                  # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
 kable(head(D[c(1:5,31:35),], n = 10L), digits = 2, align = "c")                # Markdowntabellenoutput für head(D)
@@ -135,22 +135,26 @@ library(vioplot)
 fname       <- "4-Zweistichproben-T-Test.csv"
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)
 D$Diff      = -(D$Post - D$Pre)
+
 pdf(
-file        = file.path("4-Zweistichproben-T-Test-Abbildung.pdf"),
-width       = 8,
-height      = 4)
+  file        = file.path("4-Zweistichproben-T-Test-Abbildung.pdf"),
+  width       = 8,
+  height      = 4
+)
+
 par(
-family      = "sans",
-mfcol       = c(1,2),
-pty         = "s",
-bty         = "l",
-lwd         = 1,
-las         = 1,
-mgp         = c(2,1,0),
-xaxs        = "i",
-yaxs        = "i",
-font.main   = 1,
-cex         = .8)
+  family      = "sans",
+  mfcol       = c(1,2),
+  pty         = "s",
+  bty         = "l",
+  lwd         = 1,
+  las         = 1,
+  mgp         = c(2,1,0),
+  xaxs        = "i",
+  yaxs        = "i",
+  font.main   = 1,
+  cex         = .8
+)
 
 # Post-Pre Differenz Lineplot
 x           = 1:2
@@ -165,18 +169,20 @@ groupstds   = matrix(c(sd(D$Pre[D$Condition   == "Face-to-Face"]),
 cols        = c("gray30", "gray70")
 lwds        = c(3,1)
 matplot(
-x,
-groupmeans,
-type        = "b",
-pch         = 21,
-lty         = 1,
-col         = cols,
-lwd         = lwds,
-xlab        = "",
-ylab        = "BDI",
-xaxt        = "n",
-xlim        = c(0.5,2.5),
-ylim        = c(5,30))
+  x,
+  groupmeans,
+  type        = "b",
+  pch         = 21,
+  lty         = 1,
+  col         = cols,
+  lwd         = lwds,
+  xlab        = "",
+  ylab        = "BDI",
+  xaxt        = "n",
+  xlim        = c(0.5,2.5),
+  ylim        = c(5,30)
+)
+
 for(i in 1:2){
   arrows(                                          
   x0          = x,                                 
@@ -189,6 +195,7 @@ for(i in 1:2){
   angle       = 90,                                
   length      = 0.05)
 }
+
 legend(
   "bottomleft",
   c("Face-to-Face", "Online"),
@@ -200,6 +207,7 @@ legend(
   x.intersp  = .3,
   seg.len     = 0.6
 )
+
 text(1,1.7, "Pretest" , xpd = T, cex = 1.1)
 text(2,1.7, "Posttest", xpd = T, cex = 1.1)
 
@@ -238,12 +246,10 @@ dev.off()
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
-
 # Daten vorbereiten
-fname     <- "6_Übungen/4_Zweistichproben-T-Test/4-Zweistichproben-T-Test.csv" # Dateiname
+# fname     <- "5_Übungen/4_Zweistichproben-T-Test/4-Zweistichproben-T-Test.csv" # Dateiname
 fname     <- "4-Zweistichproben-T-Test.csv"                                    # Dateiname
 D           <- read.table(fname, sep = ",", header = TRUE)                     # Laden des Datensatzes
 D_processed <- D %>%
@@ -260,10 +266,6 @@ t_test_results <- t.test(
         )
 print(t_test_results)                                                          # Ergebnisse ausgeben
 
-# Violinplots erstellen
-# # Start plot viewer
-# hgd()
-# hgd_browse()
 # Violinplot erstellen
 ggplot(data = D_processed, aes(x = "", y = Diff_betrag, fill = Condition)) +
   geom_violin(trim = T) +                                                      # Violinplots

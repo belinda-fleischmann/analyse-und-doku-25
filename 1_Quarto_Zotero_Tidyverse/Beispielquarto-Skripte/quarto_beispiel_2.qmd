@@ -22,7 +22,7 @@ library(dplyr)                                                                 #
 library(ggplot2)                                                               # Für ggplot()
 
 # Daten vorbereiten
-# file_path <- "6_Übungen/1_Einfache_lineare_Regression/1-Einfache-Lineare-Regression.csv"
+# file_path <- "5_Übungen/1_Einfache_lineare_Regression/1-Einfache-Lineare-Regression.csv"
 file_path <- "Daten_2.csv"
 wd <- getwd()
 

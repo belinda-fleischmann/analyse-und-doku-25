@@ -1,6 +1,6 @@
 ---
 title: "Einfaktorielle Varianzanalyse"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 5-Referenzen.bib
 lang: de
 format: 
@@ -55,13 +55,20 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r echo = F, warning = F}
 #| label: tbl-bdi
 #| tbl-cap : "Pre Intervention BDI Werte der Studiengruppen"
-library(knitr)                                                                 # knitr für Tabellen
+library(knitr)                                                                 # Für kable()
 fname       <- "5-Einfaktorielle-Varianzanalyse.csv"                           # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
-kable(D[c(1:3,                                                                 # erste zwei Patient:innen CBASP Bedingung
-         (1:3)+sum(n_i[1]),                                                    # erste zwei Patient:innen CBT-E Bedingung
-         (1:3)+sum(n_i[1:2]),                                                  # erste zwei Patient:innen CBT-M Bedingung
-         (1:3)+sum(n_i[1:3])),], digits = 2, align = "c")                      # erste zwei Patient:innen WL    Bedingung
+n_i         <- as.vector(table(D$Treatment))                                   # Anzahl Patient:innen pro Gruppe
+kable(
+  D[
+    c(
+      1:3,                                                                     # erste zwei Patient:innen CBASP Bedingung
+      (1:3)+sum(n_i[1]),                                                       # erste zwei Patient:innen CBT-E Bedingung
+      (1:3)+sum(n_i[1:2]),                                                     # erste zwei Patient:innen CBT-M Bedingung
+      (1:3)+sum(n_i[1:3])                                                      # erste zwei Patient:innen WL    Bedingung
+    ),
+  ], digits = 2, align = "c"
+)
 ``` 
 
 \newpage
@@ -76,6 +83,8 @@ folgende Ergebnisse erhalten.
 \footnotesize
 ```{r, echo = F}
 #| label: Deskriptivstatistik
+library(knitr)                                                                 # Für kable()
+
 # Laden des Datensatzes
 fname       <- "5-Einfaktorielle-Varianzanalyse.csv"                           # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
@@ -208,14 +217,13 @@ dev.off()
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
 library(afex)                                                                  # Für aov_car()
 library(ggpubr)                                                                # Für ggarrange()
 
 # Daten vorbereiten
-fname       <- "6_Übungen/5_Einfaktorielle-Varianzanalyse/5-Einfaktorielle-Varianzanalyse.csv" # Dateiname
+# fname       <- "5_Übungen/5_Einfaktorielle-Varianzanalyse/5-Einfaktorielle-Varianzanalyse.csv" # Dateiname
 fname       <- "5-Einfaktorielle-Varianzanalyse.csv"                           # Dateiname
 D           <- read.table(fname, sep = ",", header = TRUE)                     # Laden des Datensatzes
 n_subs      <- nrow(D)
@@ -245,13 +253,10 @@ print(anova_results)                                                           #
 View(anova_results)                                                            # Mehr details ansehen
 
 # Visualisierung
-# # Start plot viewer
-# hgd()
-# hgd_browse()
 bar_plot <- ggplot(data = summary_stats) +                                     # bar plot
   geom_col(
     aes(x = Treatment, y = Mean),
-    fill = "lightblue", color = "black", size = 0.2) +
+    fill = "lightblue", color = "black", linewidth = 0.2) +
   geom_errorbar(aes(x = Treatment, ymin = Mean - Std, ymax = Mean + Std),
                 width = 0.1, color = "black", size = 0.2) +
   ylim(0, 40) +

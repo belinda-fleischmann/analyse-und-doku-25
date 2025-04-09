@@ -1,6 +1,6 @@
 ---
 title: "Multiple Regression"
-author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2024"
+author: "Übungsaufgabe zu Analyse und Dokumentation SoSe 2025"
 bibliography: 7-Referenzen.bib
 lang: de
 format: 
@@ -51,7 +51,7 @@ write.csv(D, file = fname, row.names = FALSE)                                  #
 ```{r echo = F, eval = T}
 #| label: tbl-bdi
 #| tbl-cap : "Daten der ersten 10 Patient:innen des Datensatzes"
-library(knitr)                                                                 # knitr für Tabellen
+library(knitr)                                                                 # Für kable()
 fname       <- "7-Multiple-Regression.csv"                                     # Dateiname
 D           <- read.table(file.path(fname), sep = ",", header = TRUE)          # Laden des Datensatzes
 kable(D[1:10,], digits = 2, align = "c")                                       # erste 10 Patient:innen
@@ -145,14 +145,13 @@ dev.off()
 
 ```{r echo = F, eval = F}
 #| label: tidyverse style
-library(tidyverse)                                                             # Für Pipe (%>%), mutate(), filter()
+library(dplyr)                                                                 # Für Pipe (%>%), mutate(), filter()
 library(ggplot2)                                                               # Für ggplot()
-library(httpgd)                                                                # Für hgd() und hgd_browse()
 library(ppcor)                                                                 # Für pcor()
 library(plotly)                                                                # Für plot_ly()
 
 # Daten vorbereiten
-fname      <- "5_Übungen/7_Multiple-Regression/7-Multiple-Regression.csv"      # Dateiname
+# fname      <- "5_Übungen/7_Multiple-Regression/7-Multiple-Regression.csv"    # Dateiname
 fname      <- "7-Multiple-Regression.csv"                                      # Dateiname
 D          <- read.table(fname, sep = ",", header = TRUE)                      # Laden des Datensatzes
 
