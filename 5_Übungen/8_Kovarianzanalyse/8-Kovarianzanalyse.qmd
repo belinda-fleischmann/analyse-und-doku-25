@@ -299,7 +299,7 @@ cat("Stichprobenmittel BDI (CBT, PHC) : ",   round(c(
     "\nT-Statistik                ALM 2 : ", round(t_stat_alm2, 2)
   )
 
-# Zusatzaugabe (nicht Teil der Aufgabenstellung): Kovarianzanalyse mit afex::aov_ez()
+# Zusatzaufgabe (nicht Teil der Aufgabenstellung): Kovarianzanalyse mit afex::aov_ez()
 alm1 <- aov_ez(                                                                # ALM 1, nur eine kategoriale UV
   id = "ID", dv = "BDI", data = D_processed, between = "THP")
 alm2 <- aov_ez(                                                                # ALM 2, eine kategoriale UV
