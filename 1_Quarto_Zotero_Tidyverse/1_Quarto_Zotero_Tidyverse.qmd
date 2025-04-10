@@ -215,7 +215,7 @@ $\mu := X\beta \in \mathbb{R}^n$ aufschreiben.
 # Quarto 
 
 \center
-![](../Abbildungen/ad_1_quarto_beispiel.png){width="90%"}
+![](../Abbildungen/ad_1_quarto_beispiel.png){width="100%"}
 
 
 #  Quarto
