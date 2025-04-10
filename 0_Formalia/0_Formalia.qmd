@@ -46,11 +46,11 @@ Aufnahme läuft.
 \vfill
 
 
-# (0) Einführung - Titelfolie {.plain}
+# (0) Formalia - Titelfolie {.plain}
 \vfill
 \center
 \huge
-\textcolor{black}{(0) Einführung}
+\textcolor{black}{(0) Formalia}
 \vfill
 
 
@@ -79,7 +79,7 @@ Aufnahme läuft.
 * Übersicht zu häufig benutzten Strukuren wissenschaftlicher Berichte
 * Fokus auf quantitativ-empirische Artikel und Präsentationen
 * "Introduction, Methods, Results, Discussion" 
-* Weiterentwicklung von **R** Kenntnissen
+* Weiterentwicklung von \textcolor{linkblue}{\href{https://www.r-project.org/}{R}} Kenntnissen
 * Einführung in wissenschaftliche Dokumentationstoools wie \textcolor{linkblue}{\href{https://quarto.org/}{Quarto}} und \textcolor{linkblue}{\href{https://www.zotero.org/}{Zotero}} 
 * Bearbeitung von Anwendungsfällen des Allgemeinen Linearen Modells.
 * Dokumentation der bearbeiteten Anwendungsfälle.
@@ -91,7 +91,7 @@ Aufnahme läuft.
 
 \begin{itemize}
 \item \textbf{Gruppe 1:}  
-Donnerstags, 13-15 Uhr (Raum G22A-110)  \\
+Donnerstags, 13-15 Uhr (Raum G26.1-007, URZ Pool 4)  \\
 \textit{(2 Ausweichtermine Mittwochs, 11-13 Uhr, Raum G22A-362)}
 \item \textbf{Gruppe 2:}  
 Donnerstags, 15-17 Uhr (Raum G26.1-007, URZ Pool 4)  \\
@@ -99,7 +99,7 @@ Donnerstags, 15-17 Uhr (Raum G26.1-007, URZ Pool 4)  \\
 \item \textbf{Gruppe 3:}  
 Freitags, 9-11 Uhr (Raum G22A-111)
 \item Tutorien (2 Gruppen, Mittwochs): Organisation über die \textcolor{linkblue}{\href{https://elearning.ovgu.de/course/view.php?id=18887}{Moodleseite des Tutoriums}}
-\item Kursmaterialien (Folien, Videos, Source Code) auf der \textcolor{linkblue}{\href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2025/Analyse+und+Dokumentation.html}{Kurswebseite}}
+\item Kursmaterialien (Folien, Videos, Übungsblätter) auf der \textcolor{linkblue}{\href{https://www.ipsy.ovgu.de/Institut/Abteilungen+des+Institutes/Methodenlehre+I+_+Experimentelle+und+Neurowissenschaftliche+Psychologie/Lehre/Sommersemester+2025/Analyse+und+Dokumentation.html}{Kurswebseite}}
 \item Code auf \textcolor{linkblue}{\href{https://github.com/belindamef/analyse-und-doku-25}{Github}}
 \item Ankündigungen über die \textcolor{linkblue}{\href{https://elearning.ovgu.de/course/view.php?id=19052}{Moodleseite des Seminars}}
 \item Vorherige Iteration des Kurses: \textcolor{linkblue}{\href{https://bit.ly/43nYIGv}{Design, Analyse, Dokumentation (SoSe 2024)}}
@@ -183,7 +183,7 @@ Freitag        & 11.07.25       & Präsentationen        &  Kovarianzanalyse    
 \textcolor{darkblue}{Leistungsnachweis: Gruppenarbeit}
 
 \begin{itemize}\small \justifying
-\item Anwendungsfällen des Allgemeinen Linearen Modells im Kontext der Psychotherapieforschung
+\item Anwendungsfälle des Allgemeinen Linearen Modells im Kontext der Psychotherapieforschung
 \item Studierende arbeiten in Kleingruppen (2-3 Personen) an einem Übungsblatt  
 \item Pro Gruppe ist eine vollständige Datenanalyse mit \textcolor{linkblue}{\href{https://www.r-project.org/}{R}} durchzuführen 
 \item Pro Gruppe ist ein Bericht und eine Präsentation mit \textcolor{linkblue}{\href{https://quarto.org/}{Quarto}} zu erstellen 

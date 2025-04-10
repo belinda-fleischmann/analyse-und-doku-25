@@ -137,7 +137,7 @@ in ein ansprechendes Text-, Tabellen- und Abbildungslayout für Web- und Printdo
 
 * Eine Markup Language (Auszeichnungssprache) zur Erzeugung formatierten Texts 
 * Eine HTML Alternative zur Erstellung von Webseiten etc. mithilfe einfacher Texteditoren
-* Von John Gruber und Aaron Swartz 2004 mit dem Ziel hoher Lesbarkeit entwickelt  
+* Von John Gruber und Aaron Swartz 2004 mit dem Ziel hoher Lesbarkeit entwickelt
 
 \center
 \vfill
