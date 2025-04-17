@@ -3,6 +3,7 @@ project:
 
 fontsize: 8pt
 code-font-size: 6pt
+lang: de
 format:
   beamer:
     include-in-header: ../Header.tex
