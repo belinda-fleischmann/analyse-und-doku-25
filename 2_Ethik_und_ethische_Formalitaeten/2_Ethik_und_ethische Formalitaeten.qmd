@@ -58,7 +58,7 @@ Belinda Fleischmann und Dirk Ostwald
 \vfill
 \center
 \huge
-\textcolor{black}{(1) Ethik und Ethische Formalitäten}
+\textcolor{black}{(2) Ethik und Ethische Formalitäten}
 \vfill
 
 
