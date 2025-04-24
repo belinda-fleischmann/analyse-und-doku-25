@@ -28,7 +28,7 @@ Belinda Fleischmann und Dirk Ostwald
 \begin{tabular}{lllll}
   & Gruppe 1/2       & Gruppe 3       & Format                    & Thema                                \\ \hline
 \textbf{1}  & \textbf{Do, 10.04.}    & \textbf{Fr, 11.04.}  & \textbf{Seminar}                    & \textbf{(1) Quarto, Zotero, Tidyverse}                   \\
-2  & Do, 17.04.        & Fr, 25.04.      & Seminar                    & (2) Ethik und Ethische Formalitäten \\
+2  & Do, 17.04.        & Fr, 25.04.      & Seminar                    & (2) Forschungsethik \\
 3  & Do, 24.04.        & Fr, 02.05.      & Seminar                    & (3) Wissenschaftliche Berichte      \\
 4  & Mi, 30.04.        & Fr, 09.05.      & Seminar                    & (4) Offenheit und Transparenz       \\
 5  & Do, 08.05.        & Fr, 16.05.      & Praxisseminar              & Offene Übung                        \\ \hline
