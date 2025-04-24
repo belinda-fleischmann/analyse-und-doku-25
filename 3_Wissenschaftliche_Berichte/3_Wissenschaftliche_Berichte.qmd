@@ -480,7 +480,7 @@ References
 @americanpsychologicalassociationapa2024
 
 
-# APA Style JARS - Experimental Designs (Table 1)
+# APA Style JARS - General quantitative reporting standards (Table 1)
 \vfill
 \center
 ![](../Abbildungen/dad_5_quant-table-method-header.pdf){width=85%} 
