@@ -237,7 +237,7 @@ aus \textcolor{linkblue}{\href{https://open-access.network/informieren/open-acce
 Anmerkungen
 
 * Es wird bei Postprints zwischen der *publi­sher's version* (*version of record*) und dem *author’s manuscript* unterschieden.
-* Bereitschaft von Verlagen, Zweitveröffentlichung zuzulassen unterschiedlich. Das Verzeichnis  \textcolor{linkblue}{\href{https://v2.sherpa.ac.uk/romeo/}{Sherpa Romeo}} gibt einen Überblick darüber, was welche Zeitschriften gestatten.
+* Bereitschaft von Verlagen, Zweitveröffentlichung zuzulassen unterschiedlich. Das Verzeichnis  \textcolor{linkblue}{\href{https://openpolicyfinder.jisc.ac.uk/}{Open policy finder}} gibt einen Überblick darüber, was welche Zeitschriften gestatten.
 * Das deutsche \textcolor{linkblue}{\href{https://www.gesetze-im-internet.de/urhg/__38.html}{Zweitveröffentlichungsrecht}} berechtigt Autor:innen, ihre Beiträge unter bestimmten Voraussetzung nach Embargofrist von 12 Monaten zweitzuveröffentlichen.
 
 
