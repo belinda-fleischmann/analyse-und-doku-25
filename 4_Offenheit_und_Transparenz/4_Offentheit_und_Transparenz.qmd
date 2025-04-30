@@ -149,7 +149,7 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 \vfill
 \flushright
 \tiny
-\textcolor{linkblue}{\url{https://www.elsevier.com/connect/trust-in-research (2019)}}
+\textcolor{linkblue}{\url{https://senseaboutscience.org/wp-content/uploads/2019/09/Quality-trust-peer-review.pdf}}
 
 
 # Das Replizierbarkeitskrisennarrativ
@@ -161,7 +161,7 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 \vfill
 \flushright
 \tiny
-\textcolor{linkblue}{\url{https://www.elsevier.com/connect/trust-in-research (2019)}}
+\textcolor{linkblue}{\url{https://senseaboutscience.org/wp-content/uploads/2019/09/Quality-trust-peer-review.pdf}}
 
 
 # Das Replizierbarkeitskrisennarrativ
