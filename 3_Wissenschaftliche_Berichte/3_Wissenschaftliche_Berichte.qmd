@@ -54,9 +54,9 @@ Belinda Fleischmann und Dirk Ostwald
 \vfill
 
 
-# AGENDA {.plain}
+# 
 \large
-\setstretch{3}
+\setstretch{3.3}
 \vfill
 
 Wissenschaftliche Kommunikation
@@ -64,22 +64,22 @@ Wissenschaftliche Kommunikation
 Standardstruktur empirisch-quantitativer Berichte
 
 Selbstkontrollfragen
+\vfill
 
-
-# Wissenschaftliche Kommunikation ===================================== {.plain}
+#  
 \AtBeginSection{}
 \section{Wissenschaftliche Kommunikation}
 
 \large
 \vfill
-\setstretch{3}
+\setstretch{3.3}
 
 **Wissenschaftliche Kommunikation**
 
 Standardstruktur empirisch-quantitativer Berichte
 
 Selbstkontrollfragen
-
+\vfill
 
 
 # Wissenschaftliche Kommunikation
@@ -113,7 +113,7 @@ Lecture notes (Vorlesungskript)
 
 Lecture (Vorlesung)
 
-TedEx talk, Podcasts, Blogs, Tweets
+TedEx talk, Podcasts, Blogs, Social Media Posts
 
 ...
 
@@ -209,7 +209,7 @@ Oberländer, A. (2020). Open Access – Es ist nicht alles Gold, was glänzt. In
 
 Anmerkung:
 
-* APC steht für Article Processing Charges, Gebühren zur Abdeckung von Kosten für Redaktionsprozess, technische Struktur, Marketing, Verbreitung etc.
+* APC = Article Processing Charges = Gebühren zur Abdeckung von Kosten für "Redaktionsprozess", "Marketing", etc.
 
 # Wissenschaftliches Publizieren: Green Open Access
 
@@ -224,7 +224,7 @@ Oberländer, A. (2020). Open Access – Es ist nicht alles Gold, was glänzt. In
 # Wissenschaftliches Publizieren: Preprint und Postprint
 
 \center
-![](../Abbildungen/ad_2_publishing_flow.png){width=47%}
+![](../Abbildungen/ad_2_publishing_flow.png){width=42%}
 
 
 \tiny \tiny
@@ -237,7 +237,8 @@ aus \textcolor{linkblue}{\href{https://open-access.network/informieren/open-acce
 Anmerkungen
 
 * Es wird bei Postprints zwischen der *publi­sher's version* (*version of record*) und dem *author’s manuscript* unterschieden.
-* Bereitschaft von Verlagen, Zweitveröffentlichung zuzulassen unterschiedlich. Das Verzeichnis  \textcolor{linkblue}{\href{https://openpolicyfinder.jisc.ac.uk/}{Open policy finder}} gibt einen Überblick darüber, was welche Zeitschriften gestatten.
+* Bereitschaft von Verlagen, Zweitveröffentlichung zuzulassen unterschiedlich. 
+* Das Verzeichnis  \textcolor{linkblue}{\href{https://openpolicyfinder.jisc.ac.uk/}{Open policy finder}} gibt einen Überblick darüber, was welche Zeitschriften gestatten.
 * Das deutsche \textcolor{linkblue}{\href{https://www.gesetze-im-internet.de/urhg/__38.html}{Zweitveröffentlichungsrecht}} berechtigt Autor:innen, ihre Beiträge unter bestimmten Voraussetzung nach Embargofrist von 12 Monaten zweitzuveröffentlichen.
 
 
@@ -272,13 +273,12 @@ Was Peer Review als Qualitätssicherung nicht leisten sollte
 \normalsize
 
 Maß der durchschnittlichen Anzahl an Zitationen von Artikeln einer Fachzeitschrift
-
+\footnotesize
 \begin{equation*}
 \mbox{2-Jahres Impact Factor} 
 = 
 \frac{\mbox{Anzahl Zitationen von Artikeln in Journal i in Jahr j-1 und j-2}}{\mbox{Anzahl Publikationen von Artikeln in Journal i in Jahr j-1 und j-2}}.
 \end{equation*}
-
 \small
 
 * Seit 1975 von Unternehmen veröffentlicht, momentan von [\textcolor{linkblue}{Clarivate Analytics}](https://clarivate.com/).
@@ -310,20 +310,20 @@ Generelle Thematiken:
 
  
 
-# Standardstruktur empirisch-quantitativer Berichte ===================================== {.plain}
+# 
 \AtBeginSection{}
 \section{Standardstruktur empirisch-quantitativer Berichte}
 
 \large
 \vfill
-\setstretch{2.5}
+\setstretch{3.3}
 
 Wissenschaftliche Kommunikation
 
 **Standardstruktur empirisch-quantitativer Berichte**
 
 Selbstkontrollfragen
-
+\vfill
 
 
 # Standardstruktur empirisch-quantitativer Berichte
@@ -420,7 +420,7 @@ References
 # APA Style JARS - Decision Flowchart für empirisch-quantitative Berichte
 \vfill
 \center
-![](../Abbildungen/dad_5_jars_quant-decision_flowchart.pdf){width=90%} 
+![](../Abbildungen/dad_5_jars_quant-decision_flowchart.pdf){width=80%} 
 
 
 \flushright
@@ -580,13 +580,13 @@ Aber: Jedes Journal und jede Konferenz haben ihre eigenen Guidelines!
 ![](../Abbildungen/dad_5_submission_guidelines.png){width=70%}
 \vfill
 
-# Selbstkontrollfragen===================================== {.plain}
+# Selbstkontrollfragen 
 \AtBeginSection{}
 \section{Selbstkontrollfragen}
 
 \large
 \vfill
-\setstretch{2.5}
+\setstretch{3.3}
 
 Wissenschaftliche Kommunikation
 
@@ -594,6 +594,7 @@ Standardstruktur empirisch-quantitativer Berichte
 
 **Selbstkontrollfragen**
 
+\vfill
 
 # Selbstkontrollfragen
 \vfill
@@ -613,5 +614,4 @@ Empfehlung des Publication Manuals der APA.
 
 
 # Referenzen
-\small
-\setstretch{1.5}
+\footnotesize
