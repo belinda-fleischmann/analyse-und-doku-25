@@ -54,38 +54,42 @@ Belinda Fleischmann und Dirk Ostwald
 \vfill
 
 
-# AGENDA {.plain}
+#  
 \large
-\setstretch{2.5}
+\setstretch{3.0}
 \vfill
 
 Motivation
 
-Methodentransparenz und Datentransparenz
+Methodentransparenz 
+
+Datentransparenz
 
 Selbstkontrollfragen
+\vfill 
 
-
-# Motivation ===================================== {.plain}
+#  
 \AtBeginSection{}
 \section{Motivation}
 
 \large
 \vfill
-\setstretch{2.5}
+\setstretch{3.0}
 
 **Motivation**
 
-Methodentransparenz und Datentransparenz
+Methodentransparenz 
+
+Datentransparenz
 
 Selbstkontrollfragen
-
+\vfill 
 
 # Motivation
 \vfill
 \center
 \vspace{8mm}
-![](../Abbildungen/dad_6_nature_cartoon.pdf){width=80%}
+![](../Abbildungen/ad_4_nature_cartoon.pdf){width=80%}
 \vfill
 \flushright
 \tiny
@@ -122,7 +126,7 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 
 \center
 \vspace{3mm}
-![](../Abbildungen/dad_6_baker.pdf){width=50%}
+![](../Abbildungen/ad_4_baker.pdf){width=50%}
 \vfill
 \flushright
 \tiny
@@ -134,7 +138,7 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 \vfill
 \center
 \vspace{3mm}
-![](../Abbildungen/dad_6_fanelli.pdf){width=60%}
+![](../Abbildungen/ad_4_fanelli.pdf){width=60%}
 \vfill
 \flushright
 \tiny
@@ -145,7 +149,7 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 
 \center
 \vspace{3mm}
-![](../Abbildungen/dad_6_elsevier_1.pdf){width=60%}
+![](../Abbildungen/ad_4_elsevier_1.pdf){width=60%}
 \vfill
 \flushright
 \tiny
@@ -157,11 +161,45 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 \vfill
 \center
 \vspace{3mm}
-![](../Abbildungen/dad_6_elsevier_2.pdf){width=60%}
+![](../Abbildungen/ad_4_elsevier_2.pdf){width=60%}
 \vfill
 \flushright
 \tiny
 \textcolor{linkblue}{\url{https://senseaboutscience.org/wp-content/uploads/2019/09/Quality-trust-peer-review.pdf}}
+
+# Das Replizierbarkeitskrisennarrativ
+\vfill
+
+\center
+\vspace{3mm}
+![](../Abbildungen/ad_4_cobey_1.pdf){width=80%}
+\vfill
+\flushright
+\tiny
+@cobey2024
+
+# Das Replizierbarkeitskrisennarrativ
+\vfill
+
+\center
+\vspace{3mm}
+![](../Abbildungen/ad_4_cobey_2.pdf){width=80%}
+\vfill
+\flushright
+\tiny
+@cobey2024
+
+# Das Replizierbarkeitskrisennarrativ
+\vfill
+
+\center
+\vspace{3mm}
+![](../Abbildungen/ad_4_cobey_3.pdf){width=80%}
+\vfill
+\flushright
+\tiny
+@cobey2024
+
 
 
 # Das Replizierbarkeitskrisennarrativ
@@ -170,43 +208,47 @@ Reproduzierbarkeitskrise in Machine-Learning-basierter Wissenschaft
 
 \center
 \vspace{3mm}
-![](../Abbildungen/dad_6_ritchie.pdf){width=40%}
+![](../Abbildungen/ad_4_ritchie.pdf){width=40%}
 \vfill
 \flushright
 \tiny
 @ritchie2020
 
 
-# Methodentransparenz und Datentransparenz ===================================== {.plain}
+# 
 \AtBeginSection{}
-\section{Methodentransparenz und Datentransparenz}
+\section{Methodentransparenz}
+
 
 \large
 \vfill
-\setstretch{2.5}
+\setstretch{3.0}
 
 Motivation
 
-**Methodentransparenz und Datentransparenz**
+**Methodentransparenz** 
+
+Datentransparenz
 
 Selbstkontrollfragen
+\vfill
 
 
-# Methodentransparenz und Datentransparenz
+# Methodentransparenz  
 
 Ausgangslage
 
-* Academia ist mehr an spannenden Resultaten als an sorgfältiger Arbeit interessiert.
-* Academia interessiert sich wenig für die eigentliche Arbeit, sondern die Resultate.
-* Academia liebt komplexe Analysen ohne den Anspruch, sie verstehen zu wollen.
-* Academia mag keine Nullergebnisse.
+* Academia ist wertet spannenden Resultate höher als sorgfältige Arbeit 
+* Academia interessiert sich wenig für die eigentliche Arbeit, sondern die Resultate 
+* Academia liebt komplexe Analysen ohne den Anspruch, sie verstehen zu wollen 
+* Academia mag keine Nullergebnisse 
 
 Konsequenzen
 
-* Publizierte Resultate sind oft nicht reproduzierbar und aufbaufähig.
-* Ressourcenverschwendung.
-* Geringes innerakademisches Vertrauen in publizierte Resultate. 
-* Gefahr des geringen extraakademischen Vertrauens in publizierte Resultate.
+* Publizierte Resultate sind oft nicht reproduzierbar und aufbaufähig 
+* Ressourcenverschwendung 
+* Geringes innerakademisches Vertrauen in publizierte Resultate 
+* Gefahr des geringen extraakademischen Vertrauens in publizierte Resultate 
 
 Lösung
 
@@ -244,7 +286,7 @@ $\Rightarrow$ Menschen machen Fehler
 
 \center
 \vfill
-![](../Abbildungen/dad_6_methoden_und_daten_transparenz.pdf){width=100%}
+![](../Abbildungen/ad_4_methoden_und_daten_transparenz.pdf){width=100%}
 \vfill
 
 
@@ -283,6 +325,24 @@ Voraussetzungen
 * Automatisierte Datenanalyse von Rohdaten zu Abbildungen und Tabellen
 * Lesbarer, gut-strukturierter und extensiv kommentierter Code
 * Verzicht auf Variablennamen mit persönlichkeitsrelevanten Merkmalen
+
+
+# 
+\AtBeginSection{}
+\section{Methodentransparenz}
+\large
+\vfill
+\setstretch{3.0}
+
+Motivation
+
+Methodentransparenz 
+
+**Datentransparenz**
+
+Selbstkontrollfragen
+\vfill
+
 
 
 # Kernaspekte der Datentransparenz
@@ -370,7 +430,7 @@ identifiziert werden kann"
 
 \center
 \vfill
-![](../Abbildungen/dad_6_datenschutzabwägung.pdf){width=60%}
+![](../Abbildungen/ad_4_datenschutzabwägung.pdf){width=60%}
 \vfill
 
 
@@ -379,7 +439,7 @@ identifiziert werden kann"
 Möglichkeiten der Datentransparenz beim Umgang mit humanen Daten
 
 \vfill
-![](../Abbildungen/dad_6_data_sharing.pdf){width=80%}
+![](../Abbildungen/ad_4_data_sharing.pdf){width=80%}
 \vfill
 
 
@@ -426,6 +486,38 @@ Nachteile
 * Verantwortlichkeit auf Seiten der Wissenschaftler:innen
 * Paternalistisch
 
+# Möglichkeiten der Datentransparenz
+\large
+\textcolor{darkblue}{Restricted sharing}
+\center
+\vfill
+![](../Abbildungen/ad_4_psycharchives_1.png){width=60%}
+\vfill
+
+
+# Möglichkeiten der Datentransparenz
+\large
+\textcolor{darkblue}{Restricted sharing}
+\center
+\vfill
+![](../Abbildungen/ad_4_psycharchives_2.png){width=80%}
+\vfill
+
+
+# Möglichkeiten der Datentransparenz
+\large
+\textcolor{darkblue}{Restricted sharing}
+
+::: {layout-ncol=3}
+![](../Abbildungen/ad_4_scientific_use_1.pdf){width="33%"}
+
+![](../Abbildungen/ad_4_scientific_use_2.pdf){width="33%"}
+
+![](../Abbildungen/ad_4_scientific_use_3.pdf){width="33%"}
+:::
+
+
+
 
 # Möglichkeiten der Datentransparenz
 \large
@@ -453,58 +545,60 @@ Nachteile
 \large
 \textcolor{darkblue}{Dynamic sharing }
 
+\normalsize
+Die elektronische Patientenakte (?)
+
 \center
 \vfill
-![](../Abbildungen/dad_6_midata_logo.png){width=40%}
-
-![](../Abbildungen/dad_6_midata_scheme.png){width=80%}
+![](../Abbildungen/ad_4_epa.png){width=40%}
 \vfill
 
 # Methodentransparenz und Datentransparenz
 \center
 \vfill
 \vspace{5mm}
-![](../Abbildungen/dad_6_open_science.png){width=55%}
+![](../Abbildungen/ad_4_open_science.png){width=55%}
 
 [\textcolor{linkblue}{Pillars of Open Science, UNESCO (2021)}](https://unesdoc.unesco.org/ark:/48223/pf0000379949/PDF/379949eng.pdf.multi)
 \vfill
 
 
-# Selbstkontrollfragen ===================================== {.plain}
+#   
 \AtBeginSection{}
 \section{Selbstkontrollfragen}
 
 \large
 \vfill
-\setstretch{2.5}
+\setstretch{3.0}
 
 Motivation
 
-Methodentransparenz und Datentransparenz
+Methodentransparenz 
+
+Datentransparenz
 
 **Selbstkontrollfragen**
+\vfill
 
 # Selbstkontrollfragen
 
 \vfill
 \footnotesize
-\setstretch{2.5}
+\setstretch{3}
 
-\begin{enumerate}
-\item Begründen Sie die Wichtigkeit, die Reproduzierbarkeit von Forschung durch Methoden- und Datentransparenz zu fördern.
-\item Erläutern und differenzieren Sie die Begriffe Replizierbarkeit und Reproduzierbarkeit.
-\item Nennen und erläutern Sie den Nutzen von Methoden- und Datentransparenz.
-\item Nennen Sie die Kernaspekte und Voraussetzungen für Methodentransparenz.
-\item Nennen Sie die Kernaspekte und Voraussetzungen für Datentransparenz.
-\item Nennen Sie drei Online-Repositorien, die in der Forschung verwendet werden.
-\item Nennen Sie zwei Datenstandards, die für die psychologische Forschungs relevant sind.
-\item Distkutieren Sie die Vor- und Nachteile verschiedener Formen von Data Sharing.
-\end{enumerate}
+1. Begründen Sie die Wichtigkeit, die Reproduzierbarkeit von Forschung durch Methoden- und Datentransparenz zu fördern.
+1. Erläutern und differenzieren Sie die Begriffe Replizierbarkeit und Reproduzierbarkeit.
+1. Nennen und erläutern Sie den Nutzen von Methoden- und Datentransparenz.
+1. Nennen Sie die Kernaspekte und Voraussetzungen für Methodentransparenz.
+1. Nennen Sie die Kernaspekte und Voraussetzungen für Datentransparenz.
+1. Nennen Sie drei Online-Repositorien, die in der Forschung verwendet werden.
+1. Nennen Sie zwei Datenstandards, die für die psychologische Forschungs relevant sind.
+1. Distkutieren Sie die Vor- und Nachteile verschiedener Formen von Data Sharing.
 \vfill
 
 
 
-# Referenzen
-\tiny
+# Referenzen {.allowframebreaks}
+\footnotesize
 \vfill
-\setstretch{1.2}
+
