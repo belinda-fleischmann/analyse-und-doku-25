@@ -82,6 +82,27 @@ Negativbeispiele
 ![](../Abbildungen/ad_2_negativbeispiele.pdf){width="90%"}
 
 
+# Motivation
+\center
+\large
+Zürich-Reddit-Chatbot-Studie 2025
+\vspace{4mm}
+
+![](../Abbildungen/ad_2_zurich_reddit.png){width="80%"}
+
+\vspace{3mm}
+
+\normalsize
+Presseschau
+
+[\textcolor{linkblue}{Reddit}](https://www.reddit.com/r/changemyview/comments/1k8b2hj/meta_unauthorized_experiment_on_cmv_involving/),
+[\textcolor{linkblue}{Science}](https://www.science.org/content/article/unethical-ai-research-reddit-under-fire),
+[\textcolor{linkblue}{Retraction Watch}](https://retractionwatch.com/2025/04/28/experiment-using-ai-generated-posts-on-reddit-draws-fire-for-ethics-concerns/),
+[\textcolor{linkblue}{Washington Post}](https://www.washingtonpost.com/technology/2025/04/30/reddit-ai-bot-university-zurich/),
+[\textcolor{linkblue}{New Scientist}](https://www.newscientist.com/article/2478336-reddit-users-were-subjected-to-ai-powered-experiment-without-consent/)
+
+
+
 # Was ist Ethik?
 \setstretch{2}
 
