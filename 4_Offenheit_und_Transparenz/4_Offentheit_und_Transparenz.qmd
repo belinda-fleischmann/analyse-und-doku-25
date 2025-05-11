@@ -38,7 +38,7 @@ Belinda Fleischmann und Dirk Ostwald
 9  & Do, 12.06.        & Fr, 13.06.      & Präsentationen             & Zweistichproben-T-Test              \\
 10 & Do, 19.06.        & Fr, 20.06.      & Präsentationen             & Einfaktorielle Varianzanalyse       \\
 11 & Do, 26.06.        & Fr, 27.06.      & Präsentationen             & Zweifaktorielle Varianzanalyse      \\
-12 & Do, 03.07.        & Fr, 04.07.      & Präsentationen             & Multipe Regression                  \\
+12 & Do, 03.07.        & Fr, 04.07.      & Präsentationen             & Multiple Regression                 \\
 13 & Do, 10.07.        & Fr, 11.07.      & Präsentationen             & Kovarianzanalyse                    \\ \hline
    & Juli              &                 & Klausurtermin              &                                     \\
 \end{tabular}
@@ -238,7 +238,7 @@ Selbstkontrollfragen
 
 Ausgangslage
 
-* Academia ist wertet spannenden Resultate höher als sorgfältige Arbeit 
+* Academia wertet spannende Resultate höher als sorgfältige Arbeit 
 * Academia interessiert sich wenig für die eigentliche Arbeit, sondern die Resultate 
 * Academia liebt komplexe Analysen ohne den Anspruch, sie verstehen zu wollen 
 * Academia mag keine Nullergebnisse 
@@ -252,7 +252,7 @@ Konsequenzen
 
 Lösung
 
-* Gewährleistung von Reproduzierbarkeit durch Methoden- und Datentransparenz.
+* Gewährleistung von Reproduzierbarkeit durch Methoden- und Datentransparenz 
 
 
 # Replizierbarkeit und Reproduzierbarkeit
@@ -261,9 +261,9 @@ Replizierbarkeit
 
 \normalsize
 Andere Wissenschaftler:innen nutzen andere (neue) Daten und potentiell 
-andere Methoden und kommen zur gleichen Schlußfolgerung wie eine Originalstudie.
+andere Methoden und kommen zur gleichen Schlußfolgerung wie eine Originalstudie 
 
-$\Rightarrow$ Abhängig von den wahren, aber unbekannten, Parametern.
+$\Rightarrow$ Abhängig von den wahren, aber unbekannten, Parametern 
 
 $\Rightarrow$ Unbeinflussbar
 
@@ -273,11 +273,11 @@ Reproduzierbarkeit
 
 \normalsize
 Andere Wissenschaftler:innen nutzen die gleichen Daten und die gleichen 
-Datenanalysemethoden und erhalten die gleichen Resultate (cf. @peng2011).
+Datenanalysemethoden und erhalten die gleichen Resultate (cf. @peng2011) 
 
 $\Rightarrow$ Abhängig von der Sorgfältigkeit der wissenschaftlichen Arbeit
 
-$\Rightarrow$ Beinflussbar
+$\Rightarrow$ Beeinflussbar
 
 $\Rightarrow$ Menschen machen Fehler
 
@@ -413,7 +413,7 @@ Das Datenschutzrecht gliedert sich in
 * Datenschutzgesetze der Bundesländer
 
 \normalsize
-Psychologische Daten fallen in aller Regel unter personenbezogene Daten
+Psychologische Daten fallen in aller Regel unter *personenbezogene Daten*
 
 \small
 
@@ -521,7 +521,7 @@ Nachteile
 
 # Möglichkeiten der Datentransparenz
 \large
-\textcolor{darkblue}{Dynamic sharing }
+\textcolor{darkblue}{Dynamic sharing}
 
 \normalsize
 
